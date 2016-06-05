@@ -20,7 +20,9 @@ window.cmb2DateRange = window.cmb2DateRange || {};
 					maxDate: null
 				},
 			};
-
+			if( data.no_presets ) {
+				options.presetRanges = null;
+			}
 			$body.trigger( 'cmb2_daterange_init', { '$el' : $this, 'options' : options } );
 
 			$this.daterangepicker( options );
